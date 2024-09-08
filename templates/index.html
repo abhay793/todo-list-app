@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>To-Do List</h1>
+      </header>
+
+      <main>
+        <!-- Form to Add New To-Do -->
+        <form id="todo-form" class="todo-form">
+          <div class="input-group">
+            <input
+              type="text"
+              id="title"
+              class="input-field"
+              placeholder="Title"
+              required
+            />
+            <input
+              type="text"
+              id="description"
+              class="input-field"
+              placeholder="Description"
+              required
+            />
+          </div>
+          <button type="submit" class="add-button">Add To-Do</button>
+        </form>
+
+        <!-- To-Do List -->
+        <div id="todo-list" class="todo-list"></div>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
